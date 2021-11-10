@@ -12,16 +12,16 @@ export default {
   props: {
     content: {
       type: Object,
-      required: true
+      required: true,
     },
     level: {
       type: [Number, String],
-      default: 1
+      default: 1,
     },
     wrapper: {
       type: String,
-      default: 'div'
+      default: 'div',
     },
-  }
+  },
 };
 </script>

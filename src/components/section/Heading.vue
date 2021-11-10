@@ -14,12 +14,12 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     level: {
       type: [Number, String],
-      default: 1
-    }
-  }
+      default: 1,
+    },
+  },
 };
 </script>

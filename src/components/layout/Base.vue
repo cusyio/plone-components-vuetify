@@ -20,8 +20,8 @@ export default {
     },
     wrapper: {
       type: String,
-      default: 'div'
+      default: 'div',
     },
   },
-}
+};
 </script>

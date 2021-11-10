@@ -16,18 +16,18 @@ export default {
   props: {
     text: {
       type: [String, Object, null],
-      default: null
+      default: null,
     },
     wrapper: {
       type: String,
-      default: 'div'
-    }
+      default: 'div',
+    },
   },
   computed: {
     textData() {
       const text = this?.text?.data || this?.text || '';
       return sanitizeHtml(this.updateLinksInHTML(text));
-    }
+    },
   },
   methods: {
     updateLinksInHTML(html) {
@@ -42,7 +42,7 @@ export default {
       }
 
       return html;
-    }
-  }
+    },
+  },
 };
 </script>

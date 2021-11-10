@@ -2,6 +2,7 @@
   "name": "@cusy/plone-components-vuetify",
   "description": "Plone Vuetify Component Library",
   "version": "0.1.0",
+  "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",

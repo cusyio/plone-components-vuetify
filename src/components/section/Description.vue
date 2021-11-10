@@ -10,12 +10,12 @@ export default {
   props: {
     cssClass: {
       type: [String, null],
-      default: 'body-2'
+      default: 'body-2',
     },
     description: {
       type: [String, null],
-      default: null
-    }
-  }
+      default: null,
+    },
+  },
 };
 </script>
