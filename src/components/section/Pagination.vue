@@ -1,5 +1,5 @@
 <template>
-  <component :is="wrapper" class="c-plone-pagination">
+  <component :is="wrapper" class="c-plone-pagination my-4">
     <div v-if="available" class="c-plone-pagination__results">
       <v-pagination
         v-if="batchLength > 1"
@@ -22,7 +22,7 @@
         v-if="batchLength > 1"
         v-model="currentPage"
         :length="batchLength"
-        class="c-plone-pagination__links c-plone-pagination__links--bottom"
+        class="my-2 c-plone-pagination__links c-plone-pagination__links--bottom"
       ></v-pagination>
     </div>
     <slot v-else class="c-plone-pagination__empty" name="empty">
