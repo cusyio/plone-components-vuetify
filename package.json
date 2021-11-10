@@ -9,6 +9,7 @@
   },
   "files": [
     "src",
+    "nuxt"
   ],
   "scripts": {
     "build": "vue-cli-service build",
