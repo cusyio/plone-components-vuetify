@@ -9,37 +9,46 @@
       :items-per-batch="itemsPerBatch"
     >
       <template #default="slotProps">
-        <section
-          v-for="item in slotProps.visibleItems"
-          :key="item.UID"
-          class="c-plone-pagination__item c-plone-listing-summary"
-        >
-          <h2 class="text-h4 c-plone-listing-summary__heading">
-            <nuxt-link
-              :to="$plone.getLocalPath(item['@id'])"
-              class="c-plone-listing-summary__heading-link"
-              >{{ item.title }}</nuxt-link
+        <v-container>
+          <v-row dense>
+            <v-col
+              class="c-plone-pagination__item c-plone-listing-summary"
+              v-for="item in slotProps.visibleItems"
+              :key="item.UID"
+              cols="12"
             >
-          </h2>
-          <nuxt-link
-            v-if="item.image"
-            :to="$plone.getLocalPath(item['@id'])"
-            class="c-plone-listing-summary__lead-image-link"
-          >
-            <SectionLeadImage
-              :item="item"
-              aspect-ratio="1"
-              class="c-plone-listing-summary__lead-image"
-              large="mini"
-            />
-          </nuxt-link>
-          <p
-            v-if="item.description"
-            class="c-plone-listing-summary__description"
-          >
-            {{ item.description }}
-          </p>
-        </section>
+              <v-card outlined elevation="0">
+                <div
+                  class="
+                    d-flex
+                    flex-column-reverse flex-sm-row flex-no-wrap
+                    justify-space-between
+                  "
+                >
+                  <div>
+                    <v-card-title
+                      v-text="item.title"
+                      class="text-h4"
+                    ></v-card-title>
+                    <v-card-subtitle>{{ item.description }}</v-card-subtitle>
+                    <v-card-actions>
+                      <PloneSectionReadMore
+                        :title="item.title"
+                        :url="$plone.getLocalPath(item['@id'])"
+                      />
+                    </v-card-actions>
+                  </div>
+                  <PloneSectionLeadImage
+                    :item="item"
+                    aspect-ratio="1"
+                    class="c-plone-listing-summary__lead-image"
+                    large="mini"
+                  />
+                </div>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </template>
     </PloneSectionPagination>
   </component>
@@ -69,7 +78,7 @@ export default {
   },
   computed: {
     itemsPerBatch() {
-      return this.content?.item_count || this.content?.items_total || 1;
+      return this.content?.item_count || this.content?.items_total || 5;
     },
   },
 };
