@@ -1,5 +1,5 @@
 <template>
-  <v-avatar class="ma-3" rounded :size="avatarWidth" v-if="imageData">
+  <v-avatar class="ma-sm-3" rounded :size="avatarWidth" v-if="imageData">
     <v-img
       aspect-ratio="1"
       v-bind="$attrs"
@@ -72,8 +72,8 @@ export default {
         : image.scales[this.large].download;
 
       return {
-        height: height,
-        width: width,
+        height,
+        width,
         preview: image.scales[this.preview].download,
         large: large,
         size: Math.max(height, width),
