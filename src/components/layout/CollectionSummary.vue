@@ -38,12 +38,14 @@
                       />
                     </v-card-actions>
                   </div>
-                  <PloneSectionLeadImage
-                    :item="item"
-                    aspect-ratio="1"
-                    class="c-plone-listing-summary__lead-image"
-                    large="mini"
-                  />
+                  <div class="flex-shrink-0">
+                    <PloneSectionLeadImage
+                      :item="item"
+                      aspect-ratio="1"
+                      class="c-plone-listing-summary__lead-image"
+                      large="mini"
+                    />
+                  </div>
                 </div>
               </v-card>
             </v-col>
