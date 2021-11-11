@@ -1,5 +1,5 @@
 <template>
-  <v-avatar class="ma-sm-3" rounded :size="avatarWidth" v-if="imageData">
+  <v-avatar class="" rounded :size="avatarWidth" v-if="imageData">
     <v-img
       aspect-ratio="1"
       v-bind="$attrs"

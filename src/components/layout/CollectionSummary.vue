@@ -42,7 +42,7 @@
                     <PloneSectionLeadImage
                       :item="item"
                       aspect-ratio="1"
-                      class="c-plone-listing-summary__lead-image"
+                      class="c-plone-listing-summary__lead-image ma-sm-3"
                       large="mini"
                     />
                   </div>
